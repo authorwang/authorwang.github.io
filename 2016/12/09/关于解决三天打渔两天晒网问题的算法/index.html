@@ -1,178 +1,125 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
   
-  <title>关于解决三天打渔两天晒网问题的算法 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>关于解决三天打渔两天晒网问题的算法 | AuthorWang&#39;s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="AuthorWang">
+  
+  
+    <meta name="description" content="【分析】问题呈现:已知一农夫于1990年1月1日开始进行三天打渔两天晒网的往复活动，现在给定一个晚于该日期的时间，要求解其是在打渔还是晒网。问题分析1:乍一看，只要统计出从起始到终止的总天数，然后对5求余，根据余数大于等于还是小于3就知道他在这一天是在打渔还是晒网了。问题分析2:统计天数，考虑到简便性，想到，应该先将起始年到终止年的年数求出，并判断出哪些是平年，哪些是闰年，并以年数乘以365或36">
+  
   <meta name="description" content="【分析】问题呈现:已知一农夫于1990年1月1日开始进行三天打渔两天晒网的往复活动，现在给定一个晚于该日期的时间，要求解其是在打渔还是晒网。问题分析1:乍一看，只要统计出从起始到终止的总天数，然后对5求余，根据余数大于等于还是小于3就知道他在这一天是在打渔还是晒网了。问题分析2:统计天数，考虑到简便性，想到，应该先将起始年到终止年的年数求出，并判断出哪些是平年，哪些是闰年，并以年数乘以365或36">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于解决三天打渔两天晒网问题的算法">
 <meta property="og:url" content="http://yoursite.com/2016/12/09/关于解决三天打渔两天晒网问题的算法/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="AuthorWang's">
 <meta property="og:description" content="【分析】问题呈现:已知一农夫于1990年1月1日开始进行三天打渔两天晒网的往复活动，现在给定一个晚于该日期的时间，要求解其是在打渔还是晒网。问题分析1:乍一看，只要统计出从起始到终止的总天数，然后对5求余，根据余数大于等于还是小于3就知道他在这一天是在打渔还是晒网了。问题分析2:统计天数，考虑到简便性，想到，应该先将起始年到终止年的年数求出，并判断出哪些是平年，哪些是闰年，并以年数乘以365或36">
 <meta property="og:updated_time" content="2016-12-09T03:47:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于解决三天打渔两天晒网问题的算法">
 <meta name="twitter:description" content="【分析】问题呈现:已知一农夫于1990年1月1日开始进行三天打渔两天晒网的往复活动，现在给定一个晚于该日期的时间，要求解其是在打渔还是晒网。问题分析1:乍一看，只要统计出从起始到终止的总天数，然后对5求余，根据余数大于等于还是小于3就知道他在这一天是在打渔还是晒网了。问题分析2:统计天数，考虑到简便性，想到，应该先将起始年到终止年的年数求出，并判断出哪些是平年，哪些是闰年，并以年数乘以365或36">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AuthorWang&#39;s" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
   
   <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
-
 </head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">AuthorWang&#39;s</a></h1>
+    <p><a href="/"></a></p>
   </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-关于解决三天打渔两天晒网问题的算法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/09/关于解决三天打渔两天晒网问题的算法/" class="article-date">
-  <time datetime="2016-12-09T03:46:59.000Z" itemprop="datePublished">2016-12-09</time>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2016/12/09/关于解决三天打渔两天晒网问题的算法/">
+  <time datetime="2016-12-09T03:46:59.000Z">
+    2016-12-09
+  </time>
 </a>
     
-  </div>
-  <div class="article-inner">
     
-    
-      <header class="article-header">
-        
   
-    <h1 class="article-title" itemprop="name">
-      关于解决三天打渔两天晒网问题的算法
-    </h1>
+    <h1 class="title">关于解决三天打渔两天晒网问题的算法</h1>
   
 
-      </header>
+  </header>
+  
+  <div class="entry">
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>【分析】<br>问题呈现:已知一农夫于1990年1月1日开始进行三天打渔两天晒网的往复活动，现在给定一个晚于该日期的时间，要求解其是在打渔还是晒网。<br>问题分析1:乍一看，只要统计出从起始到终止的总天数，然后对5求余，根据余数大于等于还是小于3就知道他在这一天是在打渔还是晒网了。<br>问题分析2:统计天数，考虑到简便性，想到，应该先将起始年到终止年的年数求出，并判断出哪些是平年，哪些是闰年，并以年数乘以365或366即可统计出天数，然后，再加上终止年的月份和几号的总天数即可得到结果。问题是，月份有31天的和30天的，还有28或者29天的。对于28，29，想到一种可行方法是28基础上加一个标识变量k，如果终止年为闰年就令k为1，为平年就令k为0，然而对于月份就要考虑一下了。<br>问题分析3:可以用条件语句分别对1月一直到12月每个月进行判断，这样会写出很多代码，不够简洁，想到可以把所有月份均按30天处理，最后把多出来的天加上去。这样以来，根据相关数学知识，做出了分段函数，就把算法优化了一下。</p>
+      <p>【分析】<br>问题呈现:已知一农夫于1990年1月1日开始进行三天打渔两天晒网的往复活动，现在给定一个晚于该日期的时间，要求解其是在打渔还是晒网。<br>问题分析1:乍一看，只要统计出从起始到终止的总天数，然后对5求余，根据余数大于等于还是小于3就知道他在这一天是在打渔还是晒网了。<br>问题分析2:统计天数，考虑到简便性，想到，应该先将起始年到终止年的年数求出，并判断出哪些是平年，哪些是闰年，并以年数乘以365或366即可统计出天数，然后，再加上终止年的月份和几号的总天数即可得到结果。问题是，月份有31天的和30天的，还有28或者29天的。对于28，29，想到一种可行方法是28基础上加一个标识变量k，如果终止年为闰年就令k为1，为平年就令k为0，然而对于月份就要考虑一下了。<br>问题分析3:可以用条件语句分别对1月一直到12月每个月进行判断，这样会写出很多代码，不够简洁，想到可以把所有月份均按30天处理，最后把多出来的天加上去。这样以来，根据相关数学知识，做出了分段函数，就把算法优化了一下。</p>
 <p>【代码】</p>
 <p>#include “stdio.h”<br>//定义闰年标识，年，月，日<br>int k=0;<br>int year,mon,day;<br>//子函数</p>
 <p>//子函数2 计算月份<br>int monf(int mon,int sum)<br>{<br>//计算31天的个数<br>int count=0;<br>//计算总月数<br>//若为一月直接返回<br>if(mon==1) return sum;<br>//若为二月简单处理后返回<br>if(mon==2)<br>{<br>sum=sum+31;<br>return sum;<br>}<br>//由规律得到分段函数<br>if(mon&lt;=7) count=count+0.5<em>mon-0.5;<br>else count=count+mon/2;<br>//汇总计算(将31天的1天转移至2月计算)<br>sum=sum+(mon-2)</em>30+count+28+k;<br>return sum;<br>}</p>
 <p>//子函数1 计算中间年<br>int yearf(int year,int sum)<br>{<br>int i;<br>for(i=1991;i&lt;year;i++)<br>{<br>//若为本年<br>if(year==1990)<br>{<br>sum=sum+monf(mon,sum);<br>return sum;<br>}<br>//判断平年闰年<br>if(i%4==0&amp;&amp;i%100!=0)<br>{<br>sum=sum+366;<br>}<br>else sum=sum+365;<br>}<br>//判断终止年平闰<br>if(year%4==0&amp;&amp;year%100!=0) k=1;<br>return sum;<br>}</p>
 <p>//主函数<br>int main()<br>{<br>//定义总天数，余数变量<br>int sum=0,r;<br>//输入终止日期<br>printf(“Enter the date:(Format:2012-2-1)”);<br>scanf(“%d-%d-%d”,&amp;year,&amp;mon,&amp;day);<br>//调用子函数计算总天数<br>sum=yearf(year,sum)+monf(mon,sum)+day;<br>//判断打鱼与晒网<br>r=sum%5;<br>if(r&lt;=3&amp;&amp;r!=0) printf(“Fishing”);<br>else printf(“Dry Net”);<br>return 0;<br>}</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/09/关于解决三天打渔两天晒网问题的算法/" data-id="ciwh975n200019wqq724cgna2" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
     
-  
+  </div>
+  <footer>
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
-    </div>
+</div>
   </div>
-
-
+  <footer id="footer"><div class="copyright">
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/12/09/关于解决三天打渔两天晒网问题的算法/">关于解决三天打渔两天晒网问题的算法</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
+  &copy; 2016 <a href="/">AuthorWang</a>
   
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
 
-  </div>
 </body>
 </html>

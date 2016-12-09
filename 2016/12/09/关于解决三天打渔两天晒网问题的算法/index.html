@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>关于解决三天打渔两天晒网问题的算法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="【分析】问题呈现:已知一农夫于1990年1月1日开始进行三天打渔两天晒网的往复活动，现在给定一个晚于该日期的时间，要求解其是在打渔还是晒网。问题分析1:乍一看，只要统计出从起始到终止的总天数，然后对5求余，根据余数大于等于还是小于3就知道他在这一天是在打渔还是晒网了。问题分析2:统计天数，考虑到简便性，想到，应该先将起始年到终止年的年数求出，并判断出哪些是平年，哪些是闰年，并以年数乘以365或36">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于解决三天打渔两天晒网问题的算法">
+<meta property="og:url" content="http://yoursite.com/2016/12/09/关于解决三天打渔两天晒网问题的算法/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="【分析】问题呈现:已知一农夫于1990年1月1日开始进行三天打渔两天晒网的往复活动，现在给定一个晚于该日期的时间，要求解其是在打渔还是晒网。问题分析1:乍一看，只要统计出从起始到终止的总天数，然后对5求余，根据余数大于等于还是小于3就知道他在这一天是在打渔还是晒网了。问题分析2:统计天数，考虑到简便性，想到，应该先将起始年到终止年的年数求出，并判断出哪些是平年，哪些是闰年，并以年数乘以365或36">
+<meta property="og:updated_time" content="2016-12-09T03:47:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="关于解决三天打渔两天晒网问题的算法">
+<meta name="twitter:description" content="【分析】问题呈现:已知一农夫于1990年1月1日开始进行三天打渔两天晒网的往复活动，现在给定一个晚于该日期的时间，要求解其是在打渔还是晒网。问题分析1:乍一看，只要统计出从起始到终止的总天数，然后对5求余，根据余数大于等于还是小于3就知道他在这一天是在打渔还是晒网了。问题分析2:统计天数，考虑到简便性，想到，应该先将起始年到终止年的年数求出，并判断出哪些是平年，哪些是闰年，并以年数乘以365或36">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,54 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/09/hello-world/" class="article-date">
-  <time datetime="2016-12-09T03:48:25.816Z" itemprop="datePublished">2016-12-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/09/hello-world/" data-id="ciwh95wt60000ssqqi51bxvs1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-关于解决三天打渔两天晒网问题的算法" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-关于解决三天打渔两天晒网问题的算法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/12/09/关于解决三天打渔两天晒网问题的算法/" class="article-date">
   <time datetime="2016-12-09T03:46:59.000Z" itemprop="datePublished">2016-12-09</time>
@@ -119,8 +76,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/09/关于解决三天打渔两天晒网问题的算法/">关于解决三天打渔两天晒网问题的算法</a>
+    <h1 class="article-title" itemprop="name">
+      关于解决三天打渔两天晒网问题的算法
     </h1>
   
 
@@ -144,10 +101,23 @@
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/2016/12/09/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
+</article>
 
 </section>
         
